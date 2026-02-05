@@ -114,7 +114,7 @@ jobs:
   deploy:
     name: Deploy
     needs: build
-    uses: ./.github/workflows/reusable-deploy.yml
+    uses: ./.github/workflows/reusable.yml
 
   report:
     name: Failure Report
