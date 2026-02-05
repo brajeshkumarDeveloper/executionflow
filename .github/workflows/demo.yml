@@ -106,3 +106,11 @@ jobs:
           echo "DB_NAME: ${{ env.DB_NAME }}"
            echo "SQL_DB: $SQL_DB }}"
           # Add your deployment commands here
+  report:
+    if: failure() 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output information
+        run: |
+          echo "Something went wrong"
+          echo "${{github}}"
