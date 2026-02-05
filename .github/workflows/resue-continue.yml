@@ -115,6 +115,9 @@ jobs:
     name: Deploy
     needs: build
     uses: ./.github/workflows/reusable.yml
+    with:
+      artifact-name: dist-files
+    
 
   report:
     name: Failure Report
