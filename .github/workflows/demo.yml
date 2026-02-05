@@ -107,6 +107,7 @@ jobs:
            echo "SQL_DB: $SQL_DB }}"
           # Add your deployment commands here
   report:
+    needs: [Lint,build,test,deploy]
     if: failure() 
     runs-on: ubuntu-latest
     steps:
